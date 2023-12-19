@@ -28,7 +28,7 @@ export default {
 
     .card-container{
         background-color: white;
-        width: 80%;
+        width: 90%;
         padding: 2rem;
         @include flex(row,space-between,center);
         flex-wrap: wrap;
