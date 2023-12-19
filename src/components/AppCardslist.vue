@@ -1,5 +1,13 @@
 <template>
+     <label for="cars">Choose a type:</label>
+
+    <select id="cars">
+        <option v-for="cardType in store.cardTypeList" :value="cardType.archetype_name">
+            {{ cardType.archetype_name }}
+        </option>
     
+    </select> 
+
     <section class="card-container">
         <article v-for="card in store.cardsList" :key="card.id" >
             <AppCard :card="card"/>
@@ -30,9 +38,9 @@ export default {
         background-color: white;
         width: 90%;
         padding: 2rem;
-        @include flex(row,space-between,center);
+        @include flex(row,space-evenly,center);
         flex-wrap: wrap;
-        gap: 1rem;
+        // gap: 1rem;
     }
     article{     
        width: calc(100% / 6);

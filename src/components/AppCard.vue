@@ -21,21 +21,24 @@ export default {
 
     .card{
         width: 100%;
-        height: 100%;
+        height: 500px;
         background-color: #D48F38;
         @include flex(column,space-between,center);
-        gap: .5rem;
+        gap: 1rem;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+        
         img{
             width: 100%;
         }
         h1{
             color: whitesmoke;
             text-align: center;
-            padding: 1rem;
+            // padding: 1rem;
         }
         p{
             text-align: center;
-            padding: 1rem 0rem;
+            // padding: 1rem 0rem;
         }
     }
 </style>
