@@ -1,6 +1,5 @@
 <template>
     <section>
-        <h1>Main</h1>
         <AppCardslist :cardsList="cards"/>
     </section>
 </template>
@@ -41,8 +40,15 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+@import '../styles/partials/mixins';
+
     section{
         background-color: #D48F38;
-        height: 800px;
+        // height: 800px;
+        @include flex(column, center,center);
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin: 2.5rem 0;
     }
 </style>

@@ -1,10 +1,10 @@
 <template>
-    <div>
+    
+    <section class="card-container">
         <article v-for="card in store.cardsList" :key="card.id" >
             <AppCard :card="card"/>
-
         </article>
-    </div>
+    </section>
 </template>
 <script>
 import AppCard from './AppCard.vue';
@@ -24,5 +24,18 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-    
+@import '../styles/partials/mixins';
+
+    .card-container{
+        background-color: white;
+        width: 80%;
+        padding: 2rem;
+        @include flex(row,space-between,center);
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    article{     
+       width: calc(100% / 6);
+       height: 350px;
+    }
 </style>
