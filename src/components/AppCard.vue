@@ -24,16 +24,18 @@ export default {
         height: 100%;
         background-color: #D48F38;
         @include flex(column,space-between,center);
+        gap: .5rem;
         img{
             width: 100%;
         }
         h1{
             color: whitesmoke;
             text-align: center;
+            padding: 1rem;
         }
         p{
             text-align: center;
-            padding-bottom: .5rem;
+            padding: 1rem 0rem;
         }
     }
 </style>

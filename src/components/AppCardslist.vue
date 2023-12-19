@@ -36,6 +36,6 @@ export default {
     }
     article{     
        width: calc(100% / 6);
-       height: 350px;
+       height: 100%;
     }
 </style>
