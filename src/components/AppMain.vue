@@ -29,7 +29,7 @@ export default {
         axios.get(url)
         .then((response) => {
           // handle success
-          console.log(response.data.data);
+          // console.log(response.data.data);
           this.store.cardsList = response.data.data;
         })
         .catch(function (error) {
@@ -41,7 +41,7 @@ export default {
         axios.get('https://db.ygoprodeck.com/api/v7/archetypes.php')
         .then((response) => {
           // handle success
-          console.log(response.data);
+          // console.log(response.data);
           this.store.cardTypeList = response.data;
         })
         .catch(function (error) {

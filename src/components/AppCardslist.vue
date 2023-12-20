@@ -1,8 +1,8 @@
 <template>
      <label for="card-type-selector">Choose a type:</label>
 
-    <select v-model="store.selectedOption" id="card-type-selector" @click="$emit('filter')">
-        <option v-for="cardType in store.cardTypeList" :value="cardType.archetype_name">
+    <select v-model="store.selectedOption" id="card-type-selector" >
+        <option v-for="cardType in store.cardTypeList" :value="cardType.archetype_name" @click="$emit('filter')">
             {{ cardType.archetype_name }}
         </option>  
     </select>
