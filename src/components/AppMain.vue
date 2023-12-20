@@ -1,7 +1,7 @@
 <template>
   
     <section>
-        <AppCardslist :cardsList="cards"/>
+        <AppCardslist :cardsList="cards" @filter="changeCards"/>
     </section>
 
 </template>
@@ -18,13 +18,15 @@ export default {
     },
     data() {
         return {
-            cards:[],
             store,
         }
     },
     methods: {
-      getCards(){
-        axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0')
+      changeCards(){
+        this.getCards('https://db.ygoprodeck.com/api/v7/cardinfo.php?archetype=' + this.store.selectedOption)
+      },
+      getCards(url = 'https://db.ygoprodeck.com/api/v7/cardinfo.php?archetype=Alien'){
+        axios.get(url)
         .then((response) => {
           // handle success
           console.log(response.data.data);

@@ -1,12 +1,12 @@
 <template>
-     <label for="cars">Choose a type:</label>
+     <label for="card-type-selector">Choose a type:</label>
 
-    <select id="cars">
+    <select v-model="store.selectedOption" id="card-type-selector" @click="$emit('filter')">
         <option v-for="cardType in store.cardTypeList" :value="cardType.archetype_name">
             {{ cardType.archetype_name }}
-        </option>
-    
-    </select> 
+        </option>  
+    </select>
+    <p>Selected Type: {{ store.selectedOption }}</p> 
 
     <section class="card-container">
         <article v-for="card in store.cardsList" :key="card.id" >
